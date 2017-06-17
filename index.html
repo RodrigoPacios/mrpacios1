@@ -4,3 +4,12 @@ layout: default
   <h1>Mr. Pacios</h1>
 
   <p>Haha!</p>
+
+<ul>
+	{% for news in site.posts limit:2 %}
+	<li>
+		<a href="">{{news.title}}</a>
+		<p>{{news.meta}}</p>
+	</li>
+	{% endfor %}
+</ul>
