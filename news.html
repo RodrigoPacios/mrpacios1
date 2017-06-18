@@ -1,12 +1,12 @@
 ---
-layout: default
+layout: ib
 ---
 <h1>NEWS</h1>
 
 <ul>
 	{% for news in site.categories.News %}
 	<li>
-		<a href="">{{news.title}}</a>
+		<a href="{{site.baseurl}}{{news.url}}">{{news.title}}</a>
 		<p>{{news.meta}}</p>
 	</li>
 	{% endfor %}
