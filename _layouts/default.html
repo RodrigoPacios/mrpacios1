@@ -1,15 +1,16 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta charset="utf-8">
 	<title>Mr. Pacios</title>
-	<link rel="stylesheet" type="text/css" href="{{site.baseurl}}/css/common.css">
+	<link rel="stylesheet" type="text/css" href="{{site.baseurl}}/css/site.css">
+	<script type="text/javascript" src="{{site.baseurl}}/assets/js/bootstrap.min.js"></script>
 </head>
 <body>
 
 <header>
-	<h1>Mr. Pacios</h1>
-	{% include nav.html navclass='nav-header' %}
+	{% include nav.html %}
 </header>
 
 {{content}}
@@ -18,7 +19,7 @@
 
 <footer>
 	<h1>Footer</h1>
-	{% include nav.html navclass='nav-footer' %}
+	{% include footer.html %}
 </footer>
 
 </html>

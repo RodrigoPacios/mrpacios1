@@ -2,3 +2,5 @@ markdown: redcarpet
 baseurl: /mrpacios
 exclude: ["README.md","LICENSE"]
 permalink: pretty
+sass: 
+  style: :compressed
