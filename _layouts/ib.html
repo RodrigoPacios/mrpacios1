@@ -6,8 +6,8 @@ layout: default
 
 <nav>
 	<ul>
-		<li><a href="{{site.baseurl}}/news.html">News</a></li>
-		<li><a href="{{site.baseurl}}/IB.html">IB</a></li>
+		<li><a class="{% if page.url contains 'news' %}current{% endif %}" href="{{site.baseurl}}/news/">News</a></li>
+		<li><a class="{% if page.url contains 'IB' %}current{% endif %}" href="{{site.baseurl}}/IB/">IB</a></li>
 	</ul>
 </nav>
 
