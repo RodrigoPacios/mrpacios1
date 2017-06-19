@@ -1,0 +1,24 @@
+---
+layout: default
+---
+
+<h2>Types of Planets</h2>
+
+<ol>
+{% for planet in site.data.planet-types %}
+	
+		<li>
+			<a href="#">{{planet.title}}</a>
+			{{planet.content | markdownify}}
+		</li>
+{% endfor %}
+</ol>
+
+<ul>
+	{% for news in site.posts limit:2 %}
+	<li>
+		<a href="">{{news.title}}</a>
+		<p>{{news.meta}}</p>
+	</li>
+	{% endfor %}
+</ul>

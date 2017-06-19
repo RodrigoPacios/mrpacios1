@@ -2,23 +2,19 @@
 layout: default
 ---
 
-<h2>Types of Planets</h2>
+<div class="container">
+	<div class="page-header">
+		<h1>Welcome to Physics at GIS</h1>
+		<p class="lead">Physics is the most fundamental of sciences, as it aims to provide answers about the nature of the building blocks of the Universe, what they are and how they behave. Research in Physics has laid the ground work for the development of most technologies and continues to be a driving force in shaping what our everyday lives look like. </p>
+	</div>
 
-<ol>
-{% for planet in site.data.planet-types %}
-	
-		<li>
-			<a href="#">{{planet.title}}</a>
-			{{planet.content | markdownify}}
-		</li>
-{% endfor %}
-</ol>
+	<div class="row">
+		<div class="col-md-8" style="background-color: gray; height: 50px">
+			<h3>Articles</h3>
+		</div>
+		<div class="col-md-3 col-sm-offset-1" style="background-color: gray; height: 50px">
+			<h3>News</h3>
+		</div>
+	</div>
 
-<ul>
-	{% for news in site.posts limit:2 %}
-	<li>
-		<a href="">{{news.title}}</a>
-		<p>{{news.meta}}</p>
-	</li>
-	{% endfor %}
-</ul>
+</div>
