@@ -1,4 +1,22 @@
 ---
 ---
 
+.media {
+	padding: 10px;
+	border-radius: 5px;
+	border-style: solid;
+	border-width: 0.5px;
+	border-color: #e7e7e7;
+	background-color: #f8f8f8;
+}
+
+.media.text-primary {
+	padding: 10px;
+}
+
+
+$icon-font-path: "{{site.baseurl}}/fonts/bootstrap";
+$fa-font-path: "{{site.baseurl}}/fonts/font-awesome";
+
 @import "bootstrap";
+@import "font-awesome/font-awesome";

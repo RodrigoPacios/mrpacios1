@@ -2,6 +2,9 @@
 layout: default
 ---
 
+<ol>
+{% for article in site.categories.articles %}
+	
 <div class="container">
 	<div class="media col-md-12">
 	  <div class="media-left">
@@ -10,9 +13,12 @@ layout: default
 	    </a>
 	  </div>
 	  <div class="media-body">
-	    <h4 class="media-heading">{{page.title}}</h4>
-	    {{content}}
+	    <h4 class="media-heading">{{article.title}}</h4>
+	    {{article.content}}
 	  </div>
 	  <h5 class="media-right">Date posted: {{article.date | date: "%m/%d/%Y"}}</h5>
 	</div>
 </div>
+<br>
+{% endfor %}
+</ol>

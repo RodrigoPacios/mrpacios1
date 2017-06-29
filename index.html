@@ -9,12 +9,45 @@ layout: default
 	</div>
 
 	<div class="row">
-		<div class="col-md-8" style="background-color: gray; height: 50px">
-			<h3>Articles</h3>
+		<div class="col-md-8" style="height: 50px">
+			<h3 class="text-primary">Latest Articles</h3>
+		<ul class="list-group">
+			{% for article in site.categories.articles limit:3 %}
+					
+				<div class="container">
+					<div class="media col-md-8">
+					  <div class="media-left">
+					    <a href="#">
+					      <img class="media-object" src={{article.img}} alt="">
+					    </a>
+					  </div>
+					  <div class="media-body">
+					    <h4 class="media-heading">{{article.title}}</h4>
+					    {{article.content}}
+					  </div>
+					  <h5 class="media-right">Date posted: {{article.date | date: "%m/%d/%Y" }}</h5>
+					</div>
+				</div>
+			<br>
+			{% endfor %}
+		</ul>
 		</div>
-		<div class="col-md-3 col-sm-offset-1" style="background-color: gray; height: 50px">
-			<h3>News</h3>
+
+
+		<div class="col-md-3 col-sm-offset-1 bg-primary text-white" style="height: 50px">
+
+			<h3><i class="fa fa-newspaper-o" aria-hidden="true"></i style="color: white;"> News</h3>
+
+			<ul class="list-group">
+			{% for article in site.posts limit:10 %}
+
+				<li class="list-group-item">
+					  	  <a href="{{article.url}}">{{article.title}}</a></li>  
+			{% endfor %}
+			</ul>
 		</div>
 	</div>
+
+
 
 </div>
