@@ -42,7 +42,7 @@ layout: default
 			{% for article in site.posts limit:10 %}
 
 				<li class="list-group-item">
-					  	  <a href="{{baseurl}}{{article.url}}">{{article.title}}</a>
+					  	  <a href="{{site.baseurl}}{{article.url}}">{{article.title}}</a>
 				</li>  
 			{% endfor %}
 			</ul>
