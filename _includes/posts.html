@@ -1,0 +1,41 @@
+{% if page.url contains "20" or "allarticles"%}
+
+<div class="container">
+	<div class="media col-md-8">
+	  <div class="media-left">
+	    <a href="#">
+	      <img class="media-object" src={{page.img}} alt="">
+	    </a>
+	  </div>
+	  <div class="media-body">
+	    <h4 class="media-heading">{{page.title}}</h4>
+	    {{content}}
+	  </div>
+	  <h5 class="media-right">Date posted: {{article.date | date: "%m/%d/%Y"}}</h5>
+	</div>
+</div>
+
+{% else %}
+
+<div class="container">
+	<div class="media col-md-8">
+	  <div class="media-left">
+	    <a href="#">
+	      <img class="media-object" src={{page.img}} alt="">
+	    </a>
+	  </div>
+	  <div class="media-body">
+	    <h4 class="media-heading">{{article.title}}
+	    </h4>
+	    {{article.content}}
+	  </div>
+	  <h5 class="media-right">Date posted: {{article.date | date: "%m/%d/%Y"}}</h5>
+	</div>
+</div>
+
+{% endif %}
+
+
+
+
+

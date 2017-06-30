@@ -5,20 +5,8 @@ layout: default
 <ol>
 {% for article in site.categories.dpy1 %}
 	
-<div class="container">
-	<div class="media col-md-12">
-	  <div class="media-left">
-	    <a href="#">
-	      <img class="media-object" src={{page.img}} alt="">
-	    </a>
-	  </div>
-	  <div class="media-body">
-	    <h4 class="media-heading">{{dpy1.title}}</h4>
-	    {{dpy1.content}}
-	  </div>
-	  <h5 class="media-right">Date posted: {{dpy1.date | date: "%m/%d/%Y"}}</h5>
-	</div>
-</div>
+{% include posts.html %}
+
 <br>
 {% endfor %}
 </ol>

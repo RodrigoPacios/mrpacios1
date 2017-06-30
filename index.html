@@ -11,26 +11,16 @@ layout: default
 	<div class="row">
 		<div class="col-md-8" style="height: 50px">
 			<h3 class="text-primary">Latest Articles</h3>
-		<ul class="list-group">
-			{% for article in site.categories.articles limit:3 %}
-					
-				<div class="container">
-					<div class="media col-md-8">
-					  <div class="media-left">
-					    <a href="#">
-					      <img class="media-object" src={{article.img}} alt="">
-					    </a>
-					  </div>
-					  <div class="media-body">
-					    <h4 class="media-heading">{{article.title}}</h4>
-					    {{article.content}}
-					  </div>
-					  <h5 class="media-right">Date posted: {{article.date | date: "%m/%d/%Y" }}</h5>
-					</div>
-				</div>
-			<br>
+			<ul class="list-group">
+			
+				{% for article in site.categories.articles limit:3 %}
+						
+				{% include posts.html %}
+
+				<br>
+
 			{% endfor %}
-		</ul>
+			</ul>
 		</div>
 
 

@@ -2,17 +2,4 @@
 layout: default
 ---
 
-<div class="container">
-	<div class="media col-md-12">
-	  <div class="media-left">
-	    <a href="#">
-	      <img class="media-object" src={{page.img}} alt="">
-	    </a>
-	  </div>
-	  <div class="media-body">
-	    <h4 class="media-heading">{{page.title}}</h4>
-	    {{content}}
-	  </div>
-	  <h5 class="media-right">Date posted: {{article.date | date: "%m/%d/%Y"}}</h5>
-	</div>
-</div>
+{% include posts.html %}
