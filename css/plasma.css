@@ -1,0 +1,29 @@
+body {
+	background-color: #EEEEEE;
+}
+
+ul.nav.nav-stacked li a {
+	padding: 0px;
+
+	&:hover{
+		background-color: black;
+	}
+}
+
+ul.nav.nav-stacked li:hover {
+	padding: 0px;
+	background-color: black;
+
+}
+
+col-md-3 {
+
+}
+
+.fixed-nav {
+		position: fixed;
+		left: 65.5%;
+		top: 4%;
+		width: 15.5%;
+	
+}
