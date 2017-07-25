@@ -31,3 +31,17 @@ col-md-3 {
 .panel-primary{
 	box-shadow: 2px 2px 5px #999999;
 }
+
+hr {
+
+    height: 1px;
+
+    background-color:#BBBBBB;
+
+    margin-top: 20px;
+
+    margin-bottom: 20px;
+
+    width: 100%;
+
+}
