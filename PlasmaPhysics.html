@@ -69,7 +69,9 @@ layout: plasma
 		    			<div class="media-left"><a href="{{site.baseurl}}/img/plasmarange.png"><img style="width: 100%;" src="{{site.baseurl}}/img/plasmarange.png" alt="" class="media-object"></a>
   						</div>
 
-  						<p></p>
+  						<p>(a)Comprimento de Debye: ao colocar objetos eletricamente carregados dentro do plasma, quase instantaneamente esses objetos irão atrair partículas de cargas opostas, que rodearam o objeto cancelando o campo elétrico dentro do plasma. A fronteira dessa camada de cargas ao redor dos objetos ocorre no raio em que a energia potencial é aproximadamente igual à energia térmica KT das partículas, nesse ponto as partículas escapam do potencial, podendo assim existir potenciais elétricos dentro do plasma. Em um plasma suficientemente frio a blindagem se aproxima de 100%. A distância da superfície do objeto carregado até a fronteira em que partículas tem velocidade igual ou acima da de escape, é chamada de comprimento de Debye. Para que esteja configurado o estado plasma, é necessário que o plasma ocupe um espaço muito maior que a blindagem de Debye ao redor desses objetos carregados. Essa exigência tem relação direta com a quasineutralidade do plasma, ele não pode ser tão neutro tal que as forças eletromagnéticas desapareçam. O plasma também precisa ser denso o bastante tal que ele tenha partículas suficientes para blindar objetos carregados dentro de si, sem que seja dominado totalmente pela influência do objeto, ou seja, o comprimento de Debye deve ser muito menor que a dimensão do plasma.</p>
+  						<p>(b)Número de partículas na esfera de Debye: esta condição está estreitamente correlacionada a primeira, se houverem apenas uma ou duas partículas blindando o objeto carregado inserido no plasma, o conceito de blindagem não seria válido, portanto o número dessas partículas na bainha de plasma deve ser muito maior do que 1. </p>
+  						<p>(c)Frequência de oscilação do plasma e tempo médio de colisões: porque elétrons tem massa aproximadamente 1000 vezes menor que o menor íon, um próton, em um plasma, eles se movem de maneira muito mais célere que os últimos. De fato, podemos pensar que os íons formam um plano de fundo imóvel em relação aos elétrons. Quando os elétrons se deslocam em relação a esse plano de fundo, campos elétricos aparecem em direção tal que precipite o retorno à neutralidade do plasma, puxando-os de volta a sua posição inicial. Porém, como uma mola, os elétrons passam direto pela posição de equilíbrio, e o mesmo se repete na direção oposta. A frequência desse movimento é chamada de frequência de plasma. Tipicamente, essa frequência é da ordem de 109Hz. Para que se configure o estado plasma, é importante que o período de oscilações seja inferior ao tempo médio de colisões entre os íons, caso contrário, não se poderia dizer que o plasma realmente oscila, e portanto as forças eletromagnéticas não seriam dominantes, descaracterizando o estado plasma, assim, o produto da frequência de plasma vezes o tempo médio de colisões deve ser maior que 1.</p>
 					</div>
 				</div>		
   			</div>
@@ -417,7 +419,7 @@ layout: plasma
 
 		<div class="panel panel-primary">
   			<div class="panel-heading">
-    			<h3 class="panel-title">Transições de fase</h3>
+    			<h3 class="panel-title">Transição de fase</h3>
   			</div>
   			<div class="panel-body">
   				<div class="media">
@@ -425,11 +427,52 @@ layout: plasma
   				</div>
   				<div class="media">
   					<div class="media-body">
-		    			<p></p>
+		    			<p>De fato, a transição de fase gás-plasma ocorre de forma diferenciada das outras transições. As transições comumente ensinadas no Ensino Médio recebem a classificação de transições de primeira ordem, ou descontínuas, enquanto que a transição gás-plasma é classificada como de segunda ordem, ou contínua, de acordo com a classificação de Ehrenfest. Argumentamos que as transições de segunda ordem são conceitualmente mais simples que as transições de primeira ordem, isto por causa do seu caráter contínuo,de acordo com Callen (1985):</p>
+		    			<div class="well">Uma mudança de estado de equilíbrio de um mínimo local a outro constitui uma transição de fase de primeira ordem, induzida por ou uma mudança de temperatura ou por uma mudança em algum outro parâmetro termodinâmico. Os dois estados entre os quais uma transição de fase ocorre são distintos, ocorrendo em regiões separadas do espaço de configurações termodinâmicas. <hr>Os estados entre os quais uma transição de fase de segunda ordem ocorre são contínuos no espaço de configurações termodinâmicas.</div>
+					</div>
+					<p>Enquanto, em um ponto de transição de primeira ordem, dois estados diferentes se encontram em equilíbrio, dificultando a identificação de qual dos dois estados o material se encontra, em uma transição de segunda ordem sempre se pode apontar o estado do material; neste, os dois estados são, de fato, o mesmo. Durante a transição de fase gás-plasma, ao se agregar ou retirar calor do material, ele continua a mudar sua temperatura, enquanto os processos de ionização e recombinação se realizam; assim, ele é intuitivamente mais confortável do que as outras transições, nas quais, apesar de continuamente fornecer (ou remover) calor ao sistema, a temperatura não muda. Concluímos que o calor de ionização é um híbrido entre o calor sensível e o latente parte da energia eleva a temperatura do sistema, e parte gera sua ionização.</p>
+					<div class="media">
+  					<div class="media-left"><a href="{{site.baseurl}}/img/ionizacao.png"><img style="width: 100;" src="{{site.baseurl}}/img/ionizacao.png" alt="" class="media-object"></a></div>
+  					</div>
+					<div class="media">
+  					<div class="media-left"><a href="{{site.baseurl}}/img/ionizacao2.png"><img style="width: 100;" src="{{site.baseurl}}/img/ionizacao2.png" alt="" class="media-object"></a></div>
+  					</div>
+
+
+				</div>	
+  			</div>
+		</div>
+
+		<div class="panel panel-primary">
+  			<div class="panel-heading">
+    			<h3 class="panel-title">Calculando a temperatura em eletron-volts</h3>
+  			</div>
+  			<div class="panel-body">
+  				<div class="media">
+  					<div class="media-left"><a href="{{site.baseurl}}/img/maxwell.png"><img style="width: 480px;" src="{{site.baseurl}}/img/maxwell.png" alt="" class="media-object"></a></div>
+  				</div>
+  				<div class="media">
+  					<div class="media-body">
+		    			<p>Assumindo a aproximação de gases perfeitos:</p>
+		    			<div class="media">
+		  					<div class="media-left"><a href="{{site.baseurl}}/img/temp1.png"><img style="width: 100;" src="{{site.baseurl}}/img/temp1.png" alt="" class="media-object"></a></div>
+		  				</div>
+		  				<div class="media">
+		  					<div class="media-left"><a href="{{site.baseurl}}/img/temp2.png"><img style="width: 100;" src="{{site.baseurl}}/img/temp2.png" alt="" class="media-object"></a></div>
+		  				</div>
+						<div class="media">
+		  					<div class="media-left"><a href="{{site.baseurl}}/img/temp3.png"><img style="width: 100;" src="{{site.baseurl}}/img/temp3.png" alt="" class="media-object"></a></div>
+		  				</div>
+		  				<div class="media">
+		  					<div class="media-left"><a href="{{site.baseurl}}/img/temp4.png"><img style="width: 100;" src="{{site.baseurl}}/img/temp4.png" alt="" class="media-object"></a></div>
+		  				</div>
+
+
 					</div>
 				</div>	
   			</div>
 		</div>
+
 
 		<hr>
 
@@ -443,6 +486,55 @@ layout: plasma
 				<li>Aplicações tecnológicas dos plasmas</li>
 				<li>Fusão termonuclear</li>
 			</ul>
+
+		<div class="panel panel-primary">
+  			<div class="panel-heading">
+    			<h3 class="panel-title">Histórico do espectrômetro de massa</h3>
+  			</div>
+  			<div class="panel-body">
+  				<div class="media">
+  					<div class="media-left"><a href="https://pt.wikipedia.org/wiki/Francis_William_Aston"><img style="width: 100;" src="{{site.baseurl}}/img/Aston.png" alt="" class="media-object"></a></div>
+  				</div>
+  				<div class="media">
+  				
+  					<div class="media-body">
+		    			<p>Como elucidado na primeira aula deste trabalho, a história dos tubos de raios catódicos e da espectroscopia de massa começa com Geissler, Plucker, Crookes, e Thomson, é importante, no entanto, ressaltar mais alguns marcos importantes no desenvolvimento desta tecnologia.</p>
+		    			<p>Em 1886, William Crookes, em pronunciamento à Chemical Section of the British Association at Birmingham, disse (WHITE; WOOD, 1986. Tradução livre pelo autor): </p>
+		    			<div class="well">Eu penso, portanto,que quando nós dizemos ‘o peso atômico de’, por exemplo, do cálcio é 40, nós realmente expressamos o fato que, embora a maioria dos átomos de cálcio de fato tenha 40 unidades de massa atômica, existe um número não pequeno que são representados por 39 ou 41, ou um número menor por 38 ou 42, e assim por diante. Não será possível, ou alcançável, que esses átomos mais pesados e mais leves possam ter em alguns casos subsequentes sido separados por um processo que lembra o fracionamento químico? Essa separação pode ter acontecido em parte quando a matéria atômica estava se condensando a partir estado primitivo de ignição intensa, mas também pode ter sido parcialmente afetado durante as eras geológicas por dissoluções e precipitações das várias terras. Isso pode parecer uma especulação audaciosa, mas eu não penso que está além do poder química testar a possibilidade.</div>
+		    			<p>De acordo com White e Wood (1986, p. 5), no mesmo ano, o físico alemão Eugen Goldstein, que investigava descargas em tubos a baixa pressão, observa que se o catodo fosse perfurado também havia um brilho em torno deste. Conclui assim que havia outros raios, além dos catódicos, indo na direção oposta. Porque esses raios passavam por dentro das perfurações, denominou-os raios canais. Treze anos depois, um alunos de Kirchhoff, Wilhelm Wien, mostra que esses raios, ou íons, poderiam ter sua trajetória desviada por um eletroímã. Durante esse mesmo período, Thomson estava no laboratório Cavendish, em Cambridge, estudando em detalhe as trajetórias de elétrons e íons positivos, percebendo que, quando defletidas por um campo magnético, se tornavam parábolas bem definidas e discretas, provando que átomos individuais do mesmo elemento tem aproximadamente a mesma massa. Assim nasceu a espectroscopia de massa, é importante esclarecer ao aluno de ensino médio o sentido da palavra espectro, a saber, o domínio dos valores possíveis para as massas. Thomson então declara (WHITE; WOOD, 1986. Tradução livre pelo autor): </p>
+		    			<div class="well">Estou certo de que existem muitos problemas na química que podem ser resolvidos com mais facilidade desta forma do que de qualquer outro método. O método é surpreendentemente sensível, ainda mais que a espectroscopia ótica, requer uma quantidade infinitesimal de material e não requer que esteja especialmente purificado. Essa técnica não é difícil se aparelhos que produzam alto vácuo estejam presentes.</div>
+		    			<p>    Ainda de acordo com White e Wood (1986, p. 7), já em 1912 Thomson conseguia distinguir trajetórias de íons cuja massa diferia em apenas 10%. E em 1919, Francis William Aston, um colega de Thomson no laboratório Cavendish, foi capaz de estabelecer uma razão de abundância de 10 para 1 para Neônio de massa atômica 20 e 22, respectivamente, um resultado muito próximo do peso atômico conhecido de 20.18. </p>
+					</div>
+
+				<div class="media">
+					<div class="media-left"><a href="https://pt.wikipedia.org/wiki/Espectrometria_de_massa"><img style="width: 100;" src="{{site.baseurl}}/img/massspect.png" alt="" class="media-object"></a></div>
+				</div>
+				
+				<div class="media-body">
+					<p>Aston continuou a aperfeiçoar seu equipamento mapeando boa parte da tabela periódica, chegando a medir 212 isótopos diferentes. Determinou assim que a maioria, e não a minoria como se pensava, dos elementos possuem isótopos, e também a chamada lei do número inteiro, que diz que as massas dos isótopos são múltiplos inteiros da massa do átomo de hidrogênio. Recebeu o prêmio Nobel da química por seus esforços em 1922. A partir do trabalho de Aston, o espectrômetro de massa passou a ser estudado e desenvolvido em vários países do mundo, começando por Estados Unidos, e depois por Canadá, Alemanha, Suécia, Japão, e Rússia. O espectrômetro desenvolvido por Aston tinha poder de resolução de 600, com as várias melhorias feitas ao equipamento, em 1955 já existiam espectrômetros com resolução igual a 500,000.</p>
+					<p>A indústria petroleira foi a primeira a adotar em massa os espectrômetros, para a análise qualitativa dos seus produtos. Já em 1943 o conteúdo de uma mistura de 9 componentes poderia ser determinado em 1 hora, o que levava 240 horas nos procedimentos anteriores (WOOD; WHITE, 1986, p. 3). Hoje, basicamente todas as indústrias de alta tecnologia utilizam esse equipamento, como aviação, comunicações, alimentos, petróleo, farmacêutica, fotografia, semicondutores, entre outros. O estudante talvez tenha se deparado com espectrômetros de massa em aeroportos, para controle de substâncias ilegais.</p>
+				</div>
+
+				</div>	
+  			</div>
+		</div>
+
+		<div class="panel panel-primary">
+  			<div class="panel-heading">
+    			<h3 class="panel-title">Aplicações da física de plasmas</h3>
+  			</div>
+  			<div class="panel-body">
+  				<div class="media">
+  					<div class="media-left"><a href="https://pt.wikipedia.org/wiki/Tubo_de_Crookes"><img style="width: 100;" src="{{site.baseurl}}/img/tubocrookes.png" alt="" class="media-object"></a></div>
+  				</div>
+  				<div class="media">
+  					<div class="media-left"><a href=""><img style="width: 100;" src="{{site.baseurl}}/img/crookesaplic1.png" alt="" class="media-object"></a></div>
+				</div>
+				<div class="media">
+  					<div class="media-left"><a href=""><img style="width: 100;" src="{{site.baseurl}}/img/crookesaplic2.png" alt="" class="media-object"></a></div>
+				</div>	
+  			</div>
+		</div>
 
 		<hr>	
 	
