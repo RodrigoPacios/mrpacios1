@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <link rel='stylesheet' href='style.css'/>
+
+  <!-- Add our custom font: Open Sans and the icons -->
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
+  <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+  <script src='script.js'></script>
+
+  <title>Narrative Generator</title> <!-- THIS IS THE TAB TEXT -->
+  <link rel="shortcut icon" href="image00.png"/> <!-- THIS IS THE TAB IMAGE -->
+
+  <meta charset="UTF-8">
+</head>
+
+<!-- ontouchstart makes :active work in mobile Safari -->
+<body ontouchstart="">
+  <main>
+    <header>
+      Narrative Generator <!-- THIS IS THE HEADER TEXT -->
+    </header>
+    <noscript>Sorry, your browser does not support JavaScript!</noscript>
+
+      <!-- <input type="submit" value="Submit"> -->
+
+    <!-- Now make the tiles! -->
+    <!-- Use the <i> to make the icon and number -->
+    <!-- Move the <span>s in CSS so they appear in the bottom left corner -->
+  <!--  <center><img src="image00.png"></center> -->
+    
+  <img src="image00.png" style="display: block; margin-left: auto;margin-right: auto;">
+  <br><br>
+
+    <ul>
+
+      <!-- Key -->
+      <li class="grey span2Vertical" style="background:transparent"></li>
+      <li class="grey span2Vertical" style = "font-size: 25px">Colors indicate which option of statement you want</li>
+      <li class="orange"><i>0</i></li>
+      <li class="orange" style="background:rgb(255, 105, 97)"><i>1</i></li>
+      <li class="grey" style="background:transparent"></li>
+      <li class="orange" style="background:rgb(27, 161, 226)"><i>2</i></li>
+      <li class="orange" style="background:rgb(0, 192, 0)"><i>3</i></li>
+      <li class="grey" style="background:transparent"></li>
+
+      <li class="grey spanhalf" style="background:transparent"></li>
+      <li class="grey spanhalf" style="background:transparent"></li>
+      <li class="grey spanhalf" style="background:transparent"></li>
+      <li class="grey spanhalf" style="background:transparent"></li>
+      <li class="grey spanhalf" style="background:transparent"></li>
+
+      <!-- Top Row -->
+      <li class="grey spanhalf">Traits</li>
+      <li class="grey spanhalf">Exemplary</li>
+      <li class="grey spanhalf">Proficient</li>
+      <li class="grey spanhalf">With some assistance</li>
+      <li class="grey spanhalf">Improvement Needed</li>
+
+      <!-- Row 1 -->
+      <li class="grey spanVertical"><strong>Engaged</strong> <br><br>1. Active participation</li>
+
+      <li class="orange spanVertical" id = '1'>High interest.
+        <span title="Name is consistently highly engaged, he/she is always on task. Frequently participates in discussions by asking relevant questions and enriches the classroom bringing up self taught information.">
+          <button type="button" class="buttonNormal" onclick = "myFunction('1','2','3','4')"></button>
+        </span>
+      </li>
+
+      <li class="orange spanVertical" id = '2'>Curious; relevant questions and input.
+        <span title="Name is usually engaged, he/she is frequently on task. Often participates by asking questions and sometimes asks relevant questions, I am happy to report that on occasion name has enriched the classroom bringing up self-taught information.">
+          <button type="button" class="buttonNormal" onclick = "myFunction('2','1','3','4')"></button>
+        </span>
+      </li>
+
+      <li class="orange spanVertical" id = '3'>Requires prompting.
+        <span title="Name often needs assistance to refocus or stay on task. He/she doesn't participate unless called upon therefore needs to practice participation so that he/she can develop into a more engaged student.">
+          <button type="button" class="buttonNormal" onclick = "myFunction('3','1','2','4')"></button>
+        </span>
+        </li>
+
+      <li class="orange spanVertical" id = '4'>Uninvolved.
+        <span title="Name is rarely engaged, and often off task. He/she shies away from participating in class discussions, it would be important to begin asking questions and is necessary for name to plan some time at home focussing on subject.">
+          <button type="button" class="buttonNormal" onclick = "myFunction('4','1','2','3')"></button>
+        </span>
+      </li>
+
+<!-- line break -->
+<li class="grey spanVertical">2. Response to feedback</li>
+      <li class="orange spanVertical" id = '5'>Constructive and on topic.
+        <span title=" When it comes to obtaining and acting on feedback, he/she presents him/herself as a versatile learner, being able to pin point how to improve his/her own work.">
+          <button type="button" class="buttonNormal" onclick = "myFunction('5','6','7','8')"></button>
+        </span>
+      </li>
+
+      <li class="orange spanVertical" id = '6'>Mostly on task.
+        <span title=" When it comes to obtaining and acting on feedback, he/she usually presents him/herself as an active learner, being able to improve his/her own work on many instances.">
+          <button type="button" class="buttonNormal" onclick = "myFunction('6','5','7','8')"></button>
+        </span>
+      </li>
+
+      <li class="orange spanVertical" id = '7'>Often off task.
+        <span title=" When it comes to obtaining and acting on feedback, I frequently need to probe him/her to draw out information about his/her level of understanding, I would advise name to seek and use feedback more independently.">
+          <button type="button" class="buttonNormal" onclick = "myFunction('7','5','6','8')"></button>
+        </span>
+        </li>
+
+      <li class="orange spanVertical" id = '8'>Disrupts the classroom.
+        <span title=" When it comes to obtaining and acting on feedback, this student needs to become proactive to seek feedback and apply to it to improve his/her work.">
+          <button type="button" class="buttonNormal" onclick = "myFunction('8','5','6','7')"></button>
+        </span>
+      </li>
+
+<!-- line break -->
+<li class="grey spanVertical">3. Homework and assessments</li>
+<li class="orange spanVertical" id = '9'>Completes all on time.
+  <span title="Formative assessments have been a strong point for him/her completing the vast majority, if not all of them, homework is always handed in on the assigned date and throughly completed.">
+    <button type="button" class="buttonNormal" onclick = "myFunction('9','10','11','12')"></button>
+  </span>
+</li>
+
+<li class="orange spanVertical" id = '10'>Good standing.
+  <span title="He/she is in good standing regarding the completion of formative assessments, most of them are completed skillfully and delivered on the assigned date.">
+    <button type="button" class="buttonNormal" onclick = "myFunction('10','9','11','12')"></button>
+  </span>
+</li>
+
+<li class="orange spanVertical" id = '11'>Not all formative completed and/or not turned in on time.
+  <span title="Formative assessments are not always handed in on the assigned date, and sometimes the quality of the work shown is not up to my expectations of name. It would be optimal if name would complete his/her assignments with less supervision.">
+    <button type="button" class="buttonNormal" onclick = "myFunction('11','10','9','12')"></button>
+  </span>
+  </li>
+
+<li class="orange spanVertical" id = '12'>Weak formatives and not meeting deadlines.
+  <span title="Formative assessments are an area in which name should focus his/her efforts. They are often not completed and/or not handed in. I advise that name come talk to me about his organizational skills.">
+    <button type="button" class="buttonNormal" onclick = "myFunction('12','10','11','9')"></button>
+  </span>
+</li>
+
+      <li class="orange spanhalf" style="background:transparent"></li>
+      <li class="orange spanhalf" style="background:transparent"></li>
+      <li class="orange spanhalf" style="background:transparent"></li>
+      <li class="orange spanhalf" style="background:transparent"></li>
+      <li class="orange spanhalf" style="background:transparent"></li>
+
+      <!-- Row 2 -->
+      <li class="grey spanVertical"><strong>Principled</strong><br><br>1. Preparation
+      </li>
+
+      <li class="orange spanVertical" id = '13'>Well prepared with exemplary behavior.
+        <span title="It is blatantly evident that name prepares him/herself well for class, always having the necessary materials at hand. He/she behaves well with technology making use of it when appropriate. I'm always glad to see him/her on time daily.">
+          <button type="button" class="buttonNormal" onclick = "myFunction('13','14','15','16')"></button>
+        </span>
+      </li>
+
+      <li class="orange spanVertical" id = '14'>Well prepared, sometimes distracted.
+        <span title="Name is well prepared for class, rarely missing a class or the materials required for one. I don't have to worry much about name around technology as he/she is seldom distracted by it. I can count on him/her to be on time and in class.">
+          <button type="button" class="buttonNormal" onclick = "myFunction('14','13','15','16')"></button>
+        </span>
+      </li>
+
+      <li class="orange spanVertical" id = '15'> Sometimes doesn't have the materials, not on time, missing classes.
+        <span title="I would like name to reflect on his/her preparation for classes, sometimes he/she does not have the required materials, or is late for class. Also, it's important that all of us know how to behave around technology nowadays, not letting ourselves be distracted by it, I find myself calling his/her attention a few times a month because of that. He/she has missed some pivotal classes and should work on getting to class in time.">
+          <button type="button" class="buttonNormal" onclick = "myFunction('15','13','14','16')"></button>
+        </span>
+        </li>
+
+      <li class="orange spanVertical" id = '16'>Poorly prepared, often late, poor attendance.
+        <span title="Being prepared for classes is one the most important habits of a student, one that carries over to several areas of our lives. I strongly recommend that name creates a morning ritual to assemble the necessary materials for class, making sure he/she misses the least number of those, and that he/she presents him/herself on time. Also, name can be easily distracted by technology, its important to make sure it is a powerful tool and not a burden.">
+          <button type="button" class="buttonNormal" onclick = "myFunction('16','13','14','15')"></button>
+        </span>
+      </li>
+
+<!-- line break -->
+    <li class="grey spanVertical">2. Attentiveness
+    </li>
+
+      <li class="orange spanVertical" id = '17'>Hard worker, very involved, respectful and self-aware.
+        <span title="Name presents him/herself with great integrity, never shying away from a demanding task. He/she is an example to be followed when it comes to walking the extra mile, frequently getting his questions answered, seeking additional information, and self-advocating with respect. Altough name is rarely off task, whenever it happens he/she is quick to self-correct, and accepts the adequate consequences.">
+          <button type="button" class="buttonNormal" onclick = "myFunction('17','18','19','20')"></button>
+        </span>
+      </li>
+
+      <li class="orange spanVertical" id = '18'>Mostly self-aware, involved, and usually doing his/her best.
+        <span title="He/she is a reliable student, with a strong moral backbone. I can count on him/her to manage his/her on behavior, and I feel secure that he/she is asking most of the questions he/she has. Name is frequently looking for feedback and asking for additional materials on particular topics. Whenever it has been necessary to call on him/her to improve his/her behavior, I'm happy to say he/she accepts consequences respectfully and promptly.">
+          <button type="button" class="buttonNormal" onclick = "myFunction('18','17','19','20')"></button>
+        </span>
+      </li>
+
+      <li class="orange spanVertical" id = '19'>Doesn't participate unless called on, doesn't actively look for feedback, often discouraged.
+        <span title="As learners, we should always look to take control of our learning, and I would like to mention a few ways in which name could improve. It is often necessary for me to prompt name to participate in class, he/she will not look for feedback on his/her own, although it doesn't happen with a high frequency, some demanding tasks have rendered name discouraged, its important to pick oneself up and charge ahead. Sometimes our actions have a negative effect on those around us, and then, it is important to understand what happened and accept the consequences with respect.">
+          <button type="button" class="buttonNormal" onclick = "myFunction('19','17','18','20')"></button>
+        </span>
+        </li>
+
+      <li class="orange spanVertical" id = '20'>Unmotivated, not looking to improve, hard to correct.
+        <span title="It would be of great value to name is he/she would work on becoming a more independent learner. Actions in that direction would include being more proactive in looking for feedback, looking to get all questions he/she might have answered, understanding when his/her actions are having a negative effect on the work environment, and accepting consequences with respect when that happens.">
+          <button type="button" class="buttonNormal" onclick = "myFunction('20','17','18','19')"></button>
+        </span>
+      </li>
+
+
+      <li class="orange spanhalf" style="background:transparent"></li>
+      <li class="orange spanhalf" style="background:transparent"></li>
+      <li class="orange spanhalf" style="background:transparent"></li>
+      <li class="orange spanhalf" style="background:transparent"></li>
+      <li class="orange spanhalf" style="background:transparent"></li>
+
+
+      <!-- Row 3 -->
+      <li class="grey spanVertical"><strong>Collaborative</strong><br><br>1. Group work ethic
+      </li>
+
+      <li class="orange spanVertical" id = '21'>Great in group work.
+        <span title="I'm proud to say what an asset name is to any group he/she is in. Knowing how to listen, name is able to make thoughtful suggestions to help his/her group. He/she works well with others, without getting off task, and provides assistance to his peers when able to.">
+          <button type="button" class="buttonNormal" onclick = "myFunction('21','22','23','24')"></button>
+        </span>
+      </li>
+
+      <li class="orange spanVertical" id = '22'>Overall positive impact on his/her groupings.
+        <span title="Name works well with others, being a reliable coworker to his/her peers. He/she can be an attentive listener and regularly makes good suggestions to his/her group. From time to time I will find him/her off task but without getting in the way of the work too much. I'm frequently pleased to see him/her helping his/her peers.">
+          <button type="button" class="buttonNormal" onclick = "myFunction('22','21','23','24')"></button>
+        </span>
+      </li>
+
+      <li class="orange spanVertical" id = '23'>Needs to be constantly supervised.
+        <span title="Whenever there is a group project, name requires my help to stay on task, often failing to listen to and collaborate with his/her peers. Name has a lot to offer, and would benefit from taking charge of his/her roles when in groups. It's important to practice being an active and participative listenter.">
+          <button type="button" class="buttonNormal" onclick = "myFunction('23','21','22','24')"></button>
+        </span>
+        </li>
+
+      <li class="orange spanVertical" id = '24'>Does poorly when in a group.
+        <span title="Group work is not the best set up for name as I usually find myself having to call on him/her to get back on task. He/she has to work on being more involved in group work, and listening to his/her peers so that he/she can think of ways to help the group complete their assignment. I believe he/she would find that he/she has a lot to offer to his/her colleagues.">
+          <button type="button" class="buttonNormal" onclick = "myFunction('24','21','22','23')"></button>
+        </span>
+      </li>
+
+    <!-- line break -->
+    <li class="grey spanVertical">2. Respect
+    </li>
+
+    <li class="orange spanVertical" id = '25'>Mature, respectful.
+      <span title="I'm impresssed be the level of maturity demonstrated by him/her, respectful when addressing me or his/her colleagues, always polite, it is clear that everyone looks forward to interacting with name. He/she is also a steward of the schools materials.">
+        <button type="button" class="buttonNormal" onclick = "myFunction('25','26','27','28')"></button>
+      </span>
+    </li>
+
+    <li class="orange spanVertical" id = '26'>Generally respectful, could work on a couple of things.
+      <span title="He/she displays respect towards me, his/her classmates, and the schools materials. I would remind him/her however, the importance of mainting a good posture, as communication is not only verbal but also visual.">
+        <button type="button" class="buttonNormal" onclick = "myFunction('26','25','27','28')"></button>
+      </span>
+    </li>
+
+    <li class="orange spanVertical" id = '27'>Requires teacher intervention to act appropriately.
+      <span title="Name often has to be reminded to be respectuful towards me and his peers, I call on him/her to use adequate language, to correct his/her posture and name will quickly correct him/herself. It's important to practice these habits so that they come naturally in the future.">
+        <button type="button" class="buttonNormal" onclick = "myFunction('27','25','26','28')"></button>
+      </span>
+      </li>
+
+    <li class="orange spanVertical" id = '28'>Disrespectful.
+      <span title="Name is not doing well when it comes to showing the appropriate respect towards me and his classmates. He/she will use supbar language and disrespectful body language, also it doesn't take much for him/her to get worked up over a disagreement. I highly recommend that this becomes an area of focus for name.">
+        <button type="button" class="buttonNormal" onclick = "myFunction('28','25','26','27')"></button>
+      </span>
+    </li>
+
+    <!-- line break -->
+
+
+      <li class="orange spanhalf" style="background:transparent"></li>
+      <li class="orange spanhalf" style="background:transparent"></li>
+      <li class="orange spanhalf" style="background:transparent"></li>
+      <li class="orange spanhalf" style="background:transparent"></li>
+      <li class="orange spanhalf" style="background:transparent"></li>
+
+
+      <!-- Row 4 -->
+      <li class="grey spanVertical"><strong>Contributing</strong><br><br>1. Large group
+      </li>
+
+      <li class="orange spanVertical" id = '29'>Active listener, proactive contributor.
+        <span title="Always with his/her hand up, eager to participate, and also referring back to previous comments when making his/her own argument.">
+          <button type="button" class="buttonNormal" onclick = "myFunction('29','30','31','32')"></button>
+        </span>
+      </li>
+
+      <li class="orange spanVertical" id = '30'>Usually participates positively.
+        <span title="Name is a role model when it comes to speaking his mind gracefully and on point. His/her contributions to class discussions are made with enthusiasm for the content and respect for others.">
+          <button type="button" class="buttonNormal" onclick = "myFunction('30','29','31','32')"></button>
+        </span>
+      </li>
+
+      <li class="orange spanVertical" id = '31'>Requires prompting, often untimely participation.
+        <span title="Whenever Name feels like, he/she laughs blantaly at others when speaking their minds in a large group discussion. With multiple reminders, Name is able to reflect and apologise. Still, we want him/her to continue to fight the urge to make fun of people and actually participate gracefully. Hopefully by the time he/she graduates this goal will be a reality.">
+          <button type="button" class="buttonNormal" onclick = "myFunction('31','29','30','32')"></button>
+        </span>
+        </li>
+
+      <li class="orange spanVertical" id = '32'>Distracted, off topic, requires constant calls to attention from the teacher.
+        <span title="Large group discussions are not Name's forte. Whenever he/she speaks up in class the comment is not even close to the topic being presented. Not to mention his/her extremely loud voice and constant use of the word like. I have been purposefully ignoring when Name raises his/her hand for the past two weeks.">
+          <button type="button" class="buttonNormal" onclick = "myFunction('32','29','30','31')"></button>
+        </span>
+      </li>
+
+    <!-- line break -->
+    <li class="grey spanVertical">2. Small group
+    </li>
+      <li class="orange spanVertical" id = '33'>Constructive interactions.
+        <span title="Name works well in any assigned group. Makes sure to listen to others' opinions and share his/her own respecftully.">
+          <button type="button" class="buttonNormal" onclick = "myFunction('33','34','35','36')"></button>
+        </span>
+      </li>
+
+      <li class="orange spanVertical" id = '34'>Generally productive.
+        <span title="Name's approach to small dicussions is very respectful and appreciated by his/her peers. He/she definitely knows how to listen to diverse opions and argues back mindfully.">
+          <button type="button" class="buttonNormal" onclick = "myFunction('34','33','35','36')"></button>
+        </span>
+      </li>
+
+      <li class="orange spanVertical" id = '35'>Often off task, needs to work on peer interaction.
+        <span title="Name is doing much better when working in small groups. It used to be much harder for him/her to take into consideration other members' opinions and only accept his/ her way of doing and seeing things. Currently, after many conversations, Name has been maturing and understanding the importance of listening and learning from peers.">
+          <button type="button" class="buttonNormal" onclick = "myFunction('35','33','34','36')"></button>
+        </span>
+        </li>
+
+      <li class="orange spanVertical" id = '36'>Unreliable when in a small group.
+        <span title="I give up talking to this student about respect. Name just doesn't listen to me or any of his/her teachers. It is impressive. Maybe he/she has a hearing difficulty. A doctor's evaluation is my recommendation at this point.">
+          <button type="button" class="buttonNormal" onclick = "myFunction('36','33','34','35')"></button>
+        </span>
+      </li>
+
+    <!-- line break -->
+    <li class="grey spanVertical">3. Physical Environment
+    </li>
+      <li class="orange spanVertical" id = '37'>School steward.
+        <span title="Name cares about the school's physical environment and shares his/her concerns by example when cleaning after himself/herself and engaging in energy saving initiatives.">
+          <button type="button" class="buttonNormal" onclick = "myFunction('37','38','39','40')"></button>
+        </span>
+        </li>
+
+      <li class="orange spanVertical" id = '38'>Usualy can be counted on to take care of classroom materials.
+        <span title="Name meets expectations when asked to take care of shared materials.">
+          <button type="button" class="buttonNormal" onclick = "myFunction('38','37','39','40')"></button>
+        </span>
+      </li>
+
+      <li class="orange spanVertical" id = '39'>Needs to be more mindful of shared materials.
+        <span title="Since most of the materials used in class are shared throughout the year with multiple students, all EAB learners are expected to carefully manage the learning environment and its tools. Name at times needs to be reminded not leave materials laying around unattended and bring back books that were taken home to study.">
+          <button type="button" class="buttonNormal" onclick = "myFunction('39','37','38','40')"></button>
+        </span>
+        </li>
+
+      <li class="orange spanVertical" id = '40'>Teacher is regularly intervening to keep the student from ruining class materials.
+        <span title="Name needs too many reminders to take of his/her materials and shared ones as well.">
+          <button type="button" class="buttonNormal" onclick = "myFunction('40','37','38','39')"></button>
+        </span>
+      </li>
+
+
+      <li class="orange spanhalf" style="background:transparent"></li>
+      <li class="orange spanhalf" style="background:transparent"></li>
+      <li class="orange spanhalf" style="background:transparent"></li>
+      <li class="orange spanhalf" style="background:transparent"></li>
+      <li class="orange spanhalf" style="background:transparent"></li>
+
+      <!-- Functions -->
+        <script type="text/javascript">
+
+        var c = 0;
+
+        function myFunction(z,s1,s2,s3) {
+          var x = document.getElementById(z);
+          var color;
+
+          if (document.getElementById(s1).style.background != 'rgb(240, 163, 10)' || document.getElementById(s2).style.background != 'rgb(240, 163, 10)' || document.getElementById(s3).style.background != 'rgb(240, 163, 10)'){
+            c = 0;
+          }
+            c+=1;
+
+
+          if (c == 1) {
+            color = 'rgb(255, 105, 97)'; /* Red */
+          }else if (c == 2){
+            color ='rgb(27, 161, 226)'; /*Blue*/
+          }else if (c == 3){
+            color = 'rgb(0, 192, 0)'; /*Green*/
+          }else{
+            c = 0;
+            color = "rgb(240, 163, 10)";/*orange*/
+          }
+
+          x.style.background = color;
+
+          document.getElementById(s1).style.background = "rgb(240, 163, 10)";
+          document.getElementById(s2).style.background = "rgb(240, 163, 10)";
+          document.getElementById(s3).style.background = "rgb(240, 163, 10)";
+
+        }
+      </script>
+
+
+  <form action="printable.html" id="form1">
+    <!-- Form: Author and Reviewer -->
+
+      <strong>Teacher:</strong> <input type="text" id='t1' name="teacher"><br>
+      <strong>Subject:</strong> &nbsp<input type="text" id='su1' name="subject"><br>
+      <strong>Student:</strong> <input type="text" id='s1' name="student">
+      <select class="testSelect" id="tselect">
+        <option value="He">Male</option>
+        <option value="She">Female</option>
+      </select> <br><br>
+
+      <label for="e1"><strong>Engaged:</strong></label>
+      <input type="text" id="e1" name="engaged" value=""><br>
+      <strong>Principled:</strong>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input type="text" id="p1" name="principled" value=""><br>
+      <strong>Collaborative:</strong><input type="text" name="collaborative" id="c1"value=""><br>
+      <strong>Contributing:</strong>&nbsp<input type="text" name="contributing" id="co1" value=""><br>
+
+      <br>
+      <strong>Comments:</strong> <textarea name="comments" id="com1" rows="18" cols="110">
+      </textarea>
+
+      <input type="submit" value="Submit" onclick="save()">
+
+    </form>
+
+
+    <script type="text/javascript">
+
+    function save(){
+      sessionStorage.clear();
+      localStorage.clear();
+
+      var y;
+      var o;
+      
+      y = document.getElementById('t1').value;
+        sessionStorage.setItem("teacher",y);
+        y = document.getElementById('su1').value;
+        sessionStorage.setItem("subject",y);
+        y = document.getElementById('s1').value;
+        sessionStorage.setItem("student",y);
+        y = document.getElementById('e1').value;
+        sessionStorage.setItem("engaged",y);
+        y = document.getElementById('p1').value;
+        sessionStorage.setItem("principled",y);
+        y = document.getElementById('c1').value;
+        sessionStorage.setItem("collaborative",y);
+        y = document.getElementById('co1').value;
+        sessionStorage.setItem("contributing",y);
+        y = document.getElementById('com1').value;
+        sessionStorage.setItem("comments",JSON.stringify(y));
+        y = document.getElementById('tselect').value;
+        sessionStorage.setItem("sex",y);
+
+        /*Paragraph1, first line for loop*/
+      for (var i = 1; i < 5; i++) {
+
+          var choices = document.getElementById(i.toString()).style.background;
+
+          if (choices == 'rgb(255, 105, 97)' && i == 1){
+            sessionStorage.setItem("p1l1","4");
+        }else if (choices == 'rgb(255, 105, 97)' && i == 2) {
+            sessionStorage.setItem("p1l1","3");
+        }else if (choices == 'rgb(255, 105, 97)' && i == 3) {
+            sessionStorage.setItem("p1l1","2");
+        }else if (choices == 'rgb(255, 105, 97)' && i == 4) {
+            sessionStorage.setItem("p1l1","1");
+        }
+      }
+
+        /*Paragraph1, second line for loop*/
+      for (var i = 5; i < 9; i++) {
+        
+          var choices = document.getElementById(i.toString()).style.background;
+
+          if (choices == 'rgb(255, 105, 97)' && i == 5){
+            sessionStorage.setItem("p1l2","4");
+        }else if (choices == 'rgb(255, 105, 97)' && i == 6) {
+            sessionStorage.setItem("p1l2","3");
+        }else if (choices == 'rgb(255, 105, 97)' && i == 7) {
+            sessionStorage.setItem("p1l2","2");
+        }else if (choices == 'rgb(255, 105, 97)' && i == 8) {
+            sessionStorage.setItem("p1l2","1");
+        }
+      }
+
+        /*Paragraph1, third line for loop*/
+      for (var i = 9; i < 13; i++) {
+        
+          var choices = document.getElementById(i.toString()).style.background;
+
+          if (choices == 'rgb(255, 105, 97)' && i == 9){
+            sessionStorage.setItem("p1l3","4");
+        }else if (choices == 'rgb(255, 105, 97)' && i == 10) {
+            sessionStorage.setItem("p1l3","3");
+        }else if (choices == 'rgb(255, 105, 97)' && i == 11) {
+            sessionStorage.setItem("p1l3","2");
+        }else if (choices == 'rgb(255, 105, 97)' && i == 12) {
+            sessionStorage.setItem("p1l3","1");
+        }
+      }
+
+        /*Paragraph2, first line for loop*/
+      for (var i = 13; i < 17; i++) {
+        
+          var choices = document.getElementById(i.toString()).style.background;
+
+          if (choices == 'rgb(255, 105, 97)' && i == 13){
+            sessionStorage.setItem("p2l1","4");
+        }else if (choices == 'rgb(255, 105, 97)' && i == 14) {
+            sessionStorage.setItem("p2l1","3");
+        }else if (choices == 'rgb(255, 105, 97)' && i == 15) {
+            sessionStorage.setItem("p2l1","2");
+        }else if (choices == 'rgb(255, 105, 97)' && i == 16) {
+            sessionStorage.setItem("p2l1","1");
+        }
+      }
+
+        /*Paragraph2, second line for loop*/
+      for (var i = 17; i < 21; i++) {
+        
+          var choices = document.getElementById(i.toString()).style.background;
+
+          if (choices == 'rgb(255, 105, 97)' && i == 17){
+            sessionStorage.setItem("p2l2","4");
+        }else if (choices == 'rgb(255, 105, 97)' && i == 18) {
+            sessionStorage.setItem("p2l2","3");
+        }else if (choices == 'rgb(255, 105, 97)' && i == 19) {
+            sessionStorage.setItem("p2l2","2");
+        }else if (choices == 'rgb(255, 105, 97)' && i == 20) {
+            sessionStorage.setItem("p2l2","1");
+        }
+      }
+
+       /*Paragraph3, first line for loop*/
+      for (var i = 21; i < 25; i++) {
+        
+          var choices = document.getElementById(i.toString()).style.background;
+
+          if (choices == 'rgb(255, 105, 97)' && i == 21){
+            sessionStorage.setItem("p3l1","4");
+        }else if (choices == 'rgb(255, 105, 97)' && i == 22) {
+            sessionStorage.setItem("p3l1","3");
+        }else if (choices == 'rgb(255, 105, 97)' && i == 23) {
+            sessionStorage.setItem("p3l1","2");
+        }else if (choices == 'rgb(255, 105, 97)' && i == 24) {
+            sessionStorage.setItem("p3l1","1");
+        }
+      }
+
+       /*Paragraph3, second line for loop*/
+      for (var i = 25; i < 29; i++) {
+        
+          var choices = document.getElementById(i.toString()).style.background;
+
+          if (choices == 'rgb(255, 105, 97)' && i == 25){
+            sessionStorage.setItem("p3l2","4");
+        }else if (choices == 'rgb(255, 105, 97)' && i == 26) {
+            sessionStorage.setItem("p3l2","3");
+        }else if (choices == 'rgb(255, 105, 97)' && i == 27) {
+            sessionStorage.setItem("p3l2","2");
+        }else if (choices == 'rgb(255, 105, 97)' && i == 28) {
+            sessionStorage.setItem("p3l2","1");
+        }
+      }
+
+       /*Paragraph4, first line for loop*/
+      for (var i = 29; i < 33; i++) {
+        
+          var choices = document.getElementById(i.toString()).style.background;
+
+          if (choices == 'rgb(255, 105, 97)' && i == 29){
+            sessionStorage.setItem("p4l1","4");
+        }else if (choices == 'rgb(255, 105, 97)' && i == 30) {
+            sessionStorage.setItem("p4l1","3");
+        }else if (choices == 'rgb(255, 105, 97)' && i == 31) {
+            sessionStorage.setItem("p4l1","2");
+        }else if (choices == 'rgb(255, 105, 97)' && i == 32) {
+            sessionStorage.setItem("p4l1","1");
+        }
+      }
+
+       /*Paragraph4, second line for loop*/
+      for (var i = 33; i < 37; i++) {
+        
+          var choices = document.getElementById(i.toString()).style.background;
+
+          if (choices == 'rgb(255, 105, 97)' && i == 33){
+            sessionStorage.setItem("p4l2","4");
+        }else if (choices == 'rgb(255, 105, 97)' && i == 34) {
+            sessionStorage.setItem("p4l2","3");
+        }else if (choices == 'rgb(255, 105, 97)' && i == 35) {
+            sessionStorage.setItem("p4l2","2");
+        }else if (choices == 'rgb(255, 105, 97)' && i == 36) {
+            sessionStorage.setItem("p4l2","1");
+        }
+      }
+
+       /*Paragraph4, third line for loop*/
+      for (var i = 37; i < 41; i++) {
+        
+          var choices = document.getElementById(i.toString()).style.background;
+
+          if (choices == 'rgb(255, 105, 97)' && i == 37){
+            sessionStorage.setItem("p4l3","4");
+        }else if (choices == 'rgb(255, 105, 97)' && i == 38) {
+            sessionStorage.setItem("p4l3","3");
+        }else if (choices == 'rgb(255, 105, 97)' && i == 39) {
+            sessionStorage.setItem("p4l3","2");
+        }else if (choices == 'rgb(255, 105, 97)' && i == 40) {
+            sessionStorage.setItem("p4l3","1");
+        }
+      }
+
+        return true;
+}
+
+    </script>
+
+
+  <li class="orange" style="background:transparent"></li>
+  <li class="orange" style="background:transparent"></li>
+  <li class="orange" style="background:transparent"></li>
+  <li class="orange" style="background:transparent"></li>
+  <li class="orange" style="background:transparent"></li>
+
+</ul>
+
+</main>
+
+</body>
+</html>

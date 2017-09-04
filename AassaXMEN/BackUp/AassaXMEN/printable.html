@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <link rel='stylesheet' href='printablestyle.css'/>
+  <meta charset="UTF-8">
+  <link rel="shortcut icon" href="image00.png"/>
+</head>
+
+<body>
+<center>
+
+<table>
+  <tr>
+    <th>Teacher</th>
+    <th>Subject</th>
+    <th>Student</th>
+    <th>Engaged</th>
+    <th>Principled</th>
+    <th>Collaborative</th>
+    <th>Contributing</th>
+  </tr>
+
+  <tr>
+    <td><script>document.write(sessionStorage.teacher);</script></td>
+    <td><script>document.write(sessionStorage.subject);</script></td>
+    <td><script>document.write(sessionStorage.student);</script></td>
+    <td><script>document.write(sessionStorage.engaged);</script></td>
+    <td><script>document.write(sessionStorage.principled);</script></td>
+    <td><script>document.write(sessionStorage.collaborative);</script></td>
+    <td><script>document.write(sessionStorage.contributing);</script></td>
+  </tr>
+
+<tr>
+<th align="center" colspan="7"><center><strong>Comments</strong></center></th>
+</tr>
+
+</table>
+
+<p style="width: 960px" align="left">
+  <script>document.write(sessionStorage.comments.substr(0,120));</script>
+  <script>document.write(sessionStorage.comments.substr(120,120));</script>
+  <script>document.write(sessionStorage.comments.substr(240,120));</script>
+  <script>document.write(sessionStorage.comments.substr(360,120));</script>
+  <script>document.write(sessionStorage.comments.substr(480,120));</script>
+  <script>document.write(sessionStorage.comments.substr(600,120));</script>
+  <script>document.write(sessionStorage.comments.substr(720,120));</script>
+  <script>document.write(sessionStorage.comments.substr(840,120));</script>
+  <script>document.write(sessionStorage.comments.substr(960,120));</script>
+  <script>document.write(sessionStorage.comments.substr(1080,120));</script>
+</p>
+
+<p><strong>Narrative:</strong></p>
+
+<p style="width: 960px" align="left">
+
+<script>
+/*Initializing variables*/
+  var a,b,c,d,e,f,g,h,i,j;
+  var reflexive, possessive, pronoun;
+
+if (sessionStorage.sex == "He"){
+  reflexive = "himself";
+  possessive = "his";
+  pronoun = "he";
+  UpperPronoun = "He";
+  pronoun2 = "him"; 
+}else if (sessionStorage.sex == "She"){
+  reflexive = "herself";
+  possessive = "her";
+  pronoun = "she";
+  UpperPronoun = "She"
+  pronoun2 = "her";
+}
+
+/* First Paragraph */
+/* This function governs the first line of the engaged paragraph - Evidence: Active Participation*/
+function p1l1(){
+  if (sessionStorage.p1l1 == '4') {
+    a = sessionStorage.student + " is consistently highly engaged, "+pronoun+" is always on task. Frequently participates in discussions by asking relevant questions and enriches the classroom bringing up self taught information.";
+  }else if (sessionStorage.p1l1 == '3') {
+    a = sessionStorage.student + " is usually engaged, "+pronoun+" is frequently on task. Often participates by asking questions and sometimes asks relevant questions, I am happy to report that on occasion "+sessionStorage.student+" has enriched the classroom bringing up self-taught information.";
+  }else if (sessionStorage.p1l1 == '2') {
+    a = sessionStorage.student + " often needs assistance to refocus or stay on task. "+UpperPronoun+" doesn't participate unless called upon therefore needs to practice participation so that "+pronoun+" can develop into a more engaged student.";
+  }else if (sessionStorage.p1l1 == '1') {
+    a = sessionStorage.student + " is rarely engaged, and often off task. "+UpperPronoun+" shies away from participating in class discussions, it would be important to start asking questions and it is necessary for "+sessionStorage.student+" to plan some time at home to focus on " + sessionStorage.subject+ ".";
+  }
+  document.write(a);
+}
+
+/* This function governs the second line of the engaged paragraph - Evidence: Response to Feedback*/
+  function p1l2(){
+    if (sessionStorage.p1l2 == '4') {
+      b = " When it comes to obtaining and acting on feedback, "+pronoun+" presents "+pronoun2+"self as a versatile learner, being able to pin point how to improve "+possessive+" own work.";
+    }else if (sessionStorage.p1l2 == '3') {
+      b = " When it comes to obtaining and acting on feedback, "+pronoun+" usually presents "+reflexive+" as an active learner, being able to improve "+possessive+" own work on many instances.";
+    }else if (sessionStorage.p1l2 == '2') {
+      b = " When it comes to obtaining and acting on feedback, I frequently need to probe "+pronoun2+" to draw out information about "+possessive+" level of understanding, I would advise "+sessionStorage.student+" to seek and use feedback more independently.";
+    }else if (sessionStorage.p1l2 == '1') {
+      b = " When it comes to obtaining and acting on feedback, "+sessionStorage.student+" needs to become proactive to seek feedback and apply to it to improve "+possessive+" work.";
+    }
+document.write(b);
+}
+/* This function governs the third line of the engaged paragraph - Evidence: Homework and assessments*/
+  function p1l3(){
+    if (sessionStorage.p1l3 == '4') {
+      c = " Formative assessments have been a strong point for "+pronoun2+" completing the vast majority, if not all of them, homework is always handed in on the assigned date and throughly completed.";
+    }else if (sessionStorage.p1l3 == '3') {
+      c = " "+UpperPronoun+" is in good standing regarding the completion of formative assessments, most of them are completed skillfully and delivered on the assigned date.";
+    }else if (sessionStorage.p1l3 == '2') {
+      c = " Formative assessments are not always handed in on the assigned date, and sometimes the quality of the work shown is not up to my expectations of "+sessionStorage.student+". It would be optimal if "+sessionStorage.student+" would complete "+possessive+" assignments with less supervision.";
+    }else if (sessionStorage.p1l3 == '1') {
+      c = " Formative assessments are an area in which "+sessionStorage.student+" should focus "+possessive+" efforts. They are often not completed and/or not handed in. I advise that "+sessionStorage.student+" come talk to me about his organizational skills.";
+    }
+document.write(c);
+}
+
+/* Second Paragraph */
+/* This function governs the first line of the Principled paragraph - Evidence: Preparation*/
+  function p2l1(){
+    if (sessionStorage.p2l1 == '4') {
+      d = " It is blatantly evident that "+sessionStorage.student+" prepares "+reflexive+" well for class, always having the necessary materials at hand. "+UpperPronoun+" behaves well with technology making use of it when appropriate. I'm always glad to see "+pronoun2+" on time daily.";
+    }else if (sessionStorage.p2l1 == '3') {
+      d = " "+sessionStorage.student+" is well prepared for class, rarely missing a class or the materials required for one. I don't have to worry much about "+sessionStorage.student+" around technology as "+pronoun+" is seldom distracted by it. I can count on "+pronoun2+" to be on time and in class.";
+    }else if (sessionStorage.p2l1 == '2') {
+      d = " I would like "+sessionStorage.student+" to reflect on "+possessive+" preparation for classes, sometimes "+pronoun+" does not have the required materials, or is late for class. Also, it's important that all of us know how to behave around technology nowadays, not letting ourselves be distracted by it, I find myself calling "+possessive+" attention a few times a month because of that. "+pronoun+" has missed some pivotal classes and should work on getting to class in time.";
+    }else if (sessionStorage.p2l1 == '1') {
+      d = " Being prepared for classes is one the most important habits of a student, one that carries over to several areas of our lives. I strongly recommend that "+sessionStorage.student+" creates a morning ritual to assemble the necessary materials for class, making sure "+pronoun+" misses the least number of those, and that "+pronoun+" presents "+pronoun2+"self on time. Also, "+sessionStorage.student+" can be easily distracted by technology, its important to make sure it is a powerful tool and not a burden.";
+    }
+document.write(d);
+}
+
+/* This function governs the second line of the Principled paragraph - Evidence: Attentiveness*/
+function p2l2(){
+    if (sessionStorage.p2l2 == '4') {
+      e = " "+sessionStorage.student+" presents "+pronoun2+"self with great integrity, never shying away from a demanding task. "+pronoun+" is an example to be followed when it comes to walking the extra mile, frequently getting his questions answered, seeking additional information, and self-advocating with respect. Altough "+sessionStorage.student+" is rarely off task, whenever it happens "+pronoun+" is quick to self-correct, and accepts the adequate consequences.";
+    }else if (sessionStorage.p2l2 == '3') {
+      e = " "+pronoun+" is a reliable student, with a strong moral backbone. I can count on "+pronoun2+" to manage "+possessive+" on behavior, and I feel secure that "+pronoun+" is asking most of the questions "+pronoun+" has. "+sessionStorage.student+" is frequently looking for feedback and asking for additional materials on particular topics. Whenever it has been necessary to call on "+pronoun2+" to improve "+possessive+" behavior, I'm happy to say "+pronoun+" accepts consequences respectfully and promptly.";
+    }else if (sessionStorage.p2l2 == '2') {
+      e = " As learners, we should always look to take control of our learning, and I would like to mention a few ways in which "+sessionStorage.student+" could improve. It is often necessary for me to prompt "+sessionStorage.student+" to participate in class, "+pronoun+" will not look for feedback on "+possessive+" own, although it doesn't happen with a high frequency, some demanding tasks have rendered "+sessionStorage.student+" discouraged, its important to pick oneself up and charge ahead. Sometimes our actions have a negative effect on those around us, and then, it is important to understand what happened and accept the consequences with respect.";
+    }else if (sessionStorage.p2l2 == '1') {
+      e = " It would be of great value to "+sessionStorage.student+" is "+pronoun+" would work on becoming a more independent learner. Actions in that direction would include being more proactive in looking for feedback, looking to get all questions "+pronoun+" might have answered, understanding when "+possessive+" actions are having a negative effect on the work environment, and accepting consequences with respect when that happens.";
+    }
+document.write(e);
+}
+
+/* Third Paragraph */
+/* This function governs the first line of the Collaborative paragraph - Evidence: Group work ethic*/
+function p3l1(){
+    if (sessionStorage.p3l1 == '4') {
+      f = " I'm proud to say what an asset "+sessionStorage.student+" is to any group "+pronoun+" is in. Knowing how to listen, "+sessionStorage.student+" is able to make thoughtful suggestions to help "+possessive+" group. "+pronoun+" works well with others, without getting off task, and provides assistance to his peers when able to.";
+    }else if (sessionStorage.p3l1 == '3') {
+      f = " "+sessionStorage.student+" works well with others, being a reliable coworker to "+possessive+" peers. "+pronoun+" can be an attentive listener and regularly makes good suggestions to "+possessive+" group. From time to time I will find "+pronoun2+" off task but without getting in the way of the work too much. I'm frequently pleased to see "+pronoun2+" helping "+possessive+" peers.";
+    }else if (sessionStorage.p3l1 == '2') {
+      f = " Whenever there is a group project, "+sessionStorage.student+" requires my help to stay on task, often failing to listen to and collaborate with "+possessive+" peers. "+sessionStorage.student+" has a lot to offer, and would benefit from taking charge of "+possessive+" roles when in groups. It's important to practice being an active and participative listenter.";
+    }else if (sessionStorage.p3l1 == '1') {
+      f = " Group work is not the best set up for "+sessionStorage.student+" as I usually find myself having to call on "+pronoun2+" to get back on task. "+pronoun+" has to work on being more involved in group work, and listening to "+possessive+" peers so that "+pronoun+" can think of ways to help the group complete their assignment. I believe "+pronoun+" would find that "+pronoun+" has a lot to offer to "+possessive+" colleagues.";
+    }
+document.write(f);
+}
+
+/* This function governs the second line of the Collaborative paragraph - Evidence: Respect*/
+function p3l2(){
+    if (sessionStorage.p3l2 == '4') {
+      g = " I'm impresssed be the level of maturity demonstrated by "+pronoun2+", respectful when addressing me or "+possessive+" colleagues, always polite, it is clear that everyone looks forward to interacting with "+sessionStorage.student+". "+pronoun+" is also a steward of the schools materials.";
+    }else if (sessionStorage.p3l2 == '3') {
+      g = " "+UpperPronoun+" displays respect towards me, "+possessive+" classmates, and the schools materials. I would remind "+pronoun2+" however, the importance of mainting a good posture, as communication is not only verbal but also visual.";
+    }else if (sessionStorage.p3l2 == '2') {
+      g = " "+sessionStorage.student+" often has to be reminded to be respectuful towards me and his peers, I call on "+pronoun2+" to use adequate language, to correct "+possessive+" posture and "+sessionStorage.student+" will quickly correct "+pronoun2+"self. It's important to practice these habits so that they come naturally in the future.";
+    }else if (sessionStorage.p3l2 == '1') {
+      g = " "+sessionStorage.student+" is not doing well when it comes to showing the appropriate respect towards me and his classmates. "+pronoun+" will use supbar language and disrespectful body language, also it doesn't take much for "+pronoun2+" to get worked up over a disagreement. I highly recommend that this becomes an area of focus for "+sessionStorage.student+".";
+    }
+document.write(g);
+}
+
+/* Fourth Paragraph */
+/* This function governs the first line of the Contributing paragraph - Evidence: Large group*/
+function p4l1(){
+    if (sessionStorage.p4l1 == '4') {
+      h = " Always with "+possessive+" hand up, eager to participate, and also referring back to previous comments when making "+possessive+" own argument.";
+    }else if (sessionStorage.p4l1 == '3') {
+      h = " "+sessionStorage.student+" is a role model when it comes to speaking his mind gracefully and on point. "+possessive+" contributions to class discussions are made with enthusiasm for the content and respect for others.";
+    }else if (sessionStorage.p4l1 == '2') {
+      h = " Whenever "+sessionStorage.student+" feels like, "+pronoun+" laughs blantaly at others when speaking their minds in a large group discussion. With multiple reminders, "+sessionStorage.student+" is able to reflect and apologise. Still, we want "+pronoun2+" to continue to fight the urge to make fun of people and actually participate gracefully. Hopefully by the time "+pronoun+" graduates this goal will be a reality.";
+    }else if (sessionStorage.p4l1 == '1') {
+      h = " Large group discussions are not "+sessionStorage.student+"'s forte. Whenever "+pronoun+" speaks up in class the comment is not even close to the topic being presented. Not to mention "+possessive+" extremely loud voice and constant use of the word like. I have been purposefully ignoring when "+sessionStorage.student+" raises "+possessive+" hand for the past two weeks.";
+    }
+document.write(h);
+}
+
+/* This function governs the second line of the Principled paragraph - Evidence: Small group*/
+function p4l2(){
+    if (sessionStorage.p4l2 == '4') {
+      i = " "+sessionStorage.student+" works well in any assigned group. Makes sure to listen to others' opinions and share "+possessive+" own respecftully.";
+    }else if (sessionStorage.p4l2 == '3') {
+      i = " "+sessionStorage.student+"'s approach to small dicussions is very respectful and appreciated by "+possessive+" peers. "+pronoun+" definitely knows how to listen to diverse opions and argues back mindfully.";
+    }else if (sessionStorage.p4l2 == '2') {
+      i = " "+sessionStorage.student+" is doing much better when working in small groups. It used to be much harder for "+pronoun2+" to take into consideration other members' opinions and only accept "+possessive+" way of doing and seeing things. Currently, after many conversations, "+sessionStorage.student+" has been maturing and understanding the importance of listening and learning from peers.";
+    }else if (sessionStorage.p4l2 == '1') {
+      i = " I give up talking to this student about respect. "+sessionStorage.student+" just doesn't listen to me or any of "+possessive+" teachers. It is impressive. Maybe "+pronoun+" has a hearing difficulty. A doctor's evaluation is my recommendation at this point.";
+    }
+document.write(i);
+}
+
+/* This function governs the second line of the Principled paragraph - Evidence: Physical Environment*/
+function p4l3(){
+    if (sessionStorage.p4l3 == '4') {
+      j = " "+sessionStorage.student+" cares about the school's physical environment and shares "+possessive+" concerns by example when cleaning after "+reflexive+" and engaging in energy saving initiatives.";
+    }else if (sessionStorage.p4l3 == '3') {
+      j = " "+sessionStorage.student+" meets expectations when asked to take care of shared materials.";
+    }else if (sessionStorage.p4l3 == '2') {
+      j = " Since most of the materials used in class are shared throughout the year with multiple students, all EAB learners are expected to carefully manage the learning environment and its tools. "+sessionStorage.student+" at times needs to be reminded not leave materials laying around unattended and bring back books that were taken home to study.";
+    }else if (sessionStorage.p4l3 == '1') {
+      j = " "+sessionStorage.student+" needs too many reminders to take of "+possessive+" materials and shared ones as well.";
+    }
+document.write(j);
+}
+
+  window.p1l1();
+  window.p1l2();
+  window.p1l3();
+
+</script>
+
+<br><br>
+
+<script type="text/javascript">
+  window.p2l1();
+  window.p2l2();
+
+</script>
+
+<br><br>
+
+<script type="text/javascript">
+  window.p3l1();
+  window.p3l2();
+
+</script>
+
+<br><br>
+
+<script type="text/javascript">
+  window.p4l1();
+  window.p4l2();
+  window.p4l3();
+
+</script>
+
+</p>
+
+</center>
+
+
+</body>
+
+
+</html>

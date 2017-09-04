@@ -1,0 +1,204 @@
+* {
+  /* Reset the default styles.
+  Use border-box because it's easier! */
+  padding:0;
+  margin:0;
+  box-sizing:border-box;
+}
+
+body {
+  background:#1a2125;
+  color:aliceblue;
+  font-family:'Open Sans', sans-serif;
+  font-weight:500;
+  margin:0 auto;
+
+  /* Click-and-drag or text-selection doesn't make sense. */
+  /* Or long-tap on webkit phones. */
+  -webkit-touch-callout:none;
+  -webkit-user-select:none;
+  -khtml-user-select:none;
+  -moz-user-select:none;
+  -ms-user-select:none;
+  user-select:none;
+}
+
+main {
+  /* Use a max-width so that we have 4 columns */
+  max-width:840px;
+  margin:auto;
+  padding:20px;
+}
+
+main header {
+  text-align:center;
+  margin:0 5px 36px 5px;
+  font-size:24px;
+  border:1px rgb(0, 0, 0) solid;
+  padding:8px;
+  background:rgba(0, 0, 0, 0.1);
+}
+
+ul {
+  /* We don't need actual bullets */
+  list-style:none;
+}
+
+li {
+  float:left; /* So that they wrap */
+  height:150px;
+  width:150px;
+  margin:5px; /* The gaps between them */
+
+  /*text-transform:capitalize;*/
+
+  /*transition may need prefixes in some browsers */
+  -webkit-transition:.2s -webkit-transform, 1s opacity;
+  -moz-transition:   .2s -moz-transform, 1s opacity;
+  -o-transition:     .2s -o-transform, 1s opacity;
+  transition:        .2s transform, 1s opacity;
+
+  /*transform*/
+  -webkit-transform:perspective(800px);
+  -moz-transform:perspective(800px);
+  -ms-transform:perspective(800px);
+  -o-transform:perspective(800px);
+  transform:perspective(800px);
+
+  /*transform-style*/
+  -webkit-transform-style:preserve-3d;
+  -moz-transform-style:preserve-3d;
+  -ms-transform-style:preserve-3d;
+  -o-transform-style:preserve-3d;
+  transform-style:preserve-3d;
+  -webkit-transform-origin-x:50%;
+  -webkit-transform-origin-y:50%;
+
+  text-align:center;
+  cursor:pointer;
+}
+
+/* When moused over, rotate it! */
+li:active {
+  /*transform*/
+  -webkit-transform:perspective(800px) rotate3d(1, 0, 0, 17deg);
+  -moz-transform:perspective(800px) rotate3d(1, 0, 0, 17deg);
+  -ms-transform:perspective(800px) rotate3d(1, 0, 0, 17deg);
+  -o-transform:perspective(800px) rotate3d(1, 0, 0, 17deg);
+  transform:perspective(800px) rotate3d(1, 0, 0, 17deg);
+}
+
+/* It'd be neat to have double-width tiles */
+.span2{
+  width:310px;
+}
+
+.twobytwo{
+  width:310px;
+  height:310px;
+  font-size:60px;
+}
+
+.span3{
+  width:470px;
+}
+
+.score{
+  height:90px;
+  width:470px;
+}
+
+.spanVertical{
+  height: 150px;
+}
+
+.span3Vertical{
+  height:470px;
+}
+
+/* Vertical double-height tiles */
+.span2Vertical{
+  height:310px;
+}
+
+/* Half the height*/
+.spanhalf{
+  height:70px;
+}
+
+/* Icon and number */
+li i{
+  font-size:60px;
+  margin:35px 0 0;
+}
+
+/* Text label on tiles */
+li span{
+  position:absolute;
+  bottom:8px;
+  left:8px;
+}
+
+/* Specialized background colours */
+.green{
+  background:rgb(0, 192, 0);
+}
+
+.purple{
+  background:rgb(177, 81, 189);
+}
+
+.phone{
+  background:rgb(27, 161, 226);
+}
+.orange{
+  font-size: 15px;
+  background:rgb(240, 163, 10);
+}
+.contacts{
+  background:rgb(119, 158, 203);
+}
+.blue{
+  background:rgb(0, 80, 239);
+}
+.maps{
+  background:rgb(119, 221, 119);
+}
+.search{
+  background:rgb(130, 111, 214);
+}
+.settings{
+  background:rgb(100, 118, 135);
+}
+.lightred{
+  background:rgb(255, 105, 97);
+}
+.red{
+  background:rgb(162, 0, 37);
+}
+
+.grey{
+  background:rgb(150, 150, 150);
+}
+
+/*clicable region*/
+.buttonNormal{
+  padding:70px 70px; /* full size 70px 70px, half size 30px 70px */
+  background: transparent;
+  border:none;
+  outline: none;
+}
+
+.buttonScore{
+  padding:36px 235px;
+  background: transparent;
+  border:none;
+  outline: none;
+}
+
+.button2Vertical{
+  padding:150px 70px;
+  background: transparent;
+  border:transparent;
+  outline: none;
+}
