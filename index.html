@@ -7,11 +7,11 @@ layout: default
 		<div class="col-md-12">
 			<center>
 				<a href="">
-					<img src="{{site.baseurl}}1/img/GIS_Logo.PNG" alt="">
+					<img src="{{site.baseurl}}/img/GIS_Logo.PNG" alt="">
 				</a>
 			
 				<a href="">
-					<img src="{{site.baseurl}}1/img/GIS_Name.PNG" alt="">
+					<img src="{{site.baseurl}}/img/GIS_Name.PNG" alt="">
 				</a>
 			</center>	
 		</div>
@@ -46,7 +46,7 @@ layout: default
 			{% for article in site.posts limit:10 %}
 
 				<li class="list-group-item">
-					  	  <a href="{{site.baseurl}}1{{article.url}}">{{article.title}}</a>
+					  	  <a href="{{site.baseurl}}{{article.url}}">{{article.title}}</a>
 				</li>  
 			{% endfor %}
 			</ul>
